@@ -4,12 +4,14 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.stereotype.Component;
 import ru.qekium.parser.ParserRunner;
 import ru.qekium.parser.model.Article;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class HtmlParser {
     public List<Article> parse(String html) {
         Document document = Jsoup.parse(html);
