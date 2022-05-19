@@ -24,7 +24,7 @@ public class HtmlParser {
             String title = titleEl.select("span").text();
             String url = ParserRunner.HABR_DOMAIN + titleEl.attr("href");
             String description = articleElement.select(".article-formatted-body p").text();
-            articles.add (new Article(username, title, description, url));
+            articles.add (new Article (username, title, description, url));
         }
         return null;
 
