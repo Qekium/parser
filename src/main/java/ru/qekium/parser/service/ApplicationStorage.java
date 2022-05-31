@@ -1,4 +1,4 @@
-package ru.qekium.parser.service.storage;
+package ru.qekium.parser.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -13,11 +13,10 @@ import ru.qekium.parser.repository.UserRepository;
 
 public class ApplicationStorage {
     private final UserRepository userRepository;
-    private  final ArticleRepository articleRepository;
+    private final ArticleRepository articleRepository;
     private final CategoryRepository categoryRepository;
     private final StatisticRepository statisticRepository;
 
-    @Transactional
     //homework
 
 

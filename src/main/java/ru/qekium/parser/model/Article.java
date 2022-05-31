@@ -1,6 +1,5 @@
 package ru.qekium.parser.model;
 
-import jdk.jfr.Category;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
@@ -20,14 +19,14 @@ public class Article {
     @JoinColumn(name = "user_id")
 //    private User user;
     private String userName;
-    private ZonedDateTime publishDate;
-    @ManyToMany
-    @JoinTable(
-            name = "articles_categories",
-            joinColumns = @JoinColumn(name = "article_id"),
-            inverseJoinColumns = @JoinColumn(name = "category_id")
-    )
-    private List<Category> categories;
+    private ZonedDateTime publishDate; // has to be replaced with Instant
+//    @ManyToMany
+//    @JoinTable(
+//            name = "articles_categories",
+//            joinColumns = @JoinColumn(name = "article_id"),
+//            inverseJoinColumns = @JoinColumn(name = "category_id")
+//    )
+//    private List<Category> categories;
     private String title;
     private String description;
     private String url;
